@@ -57,7 +57,7 @@ int main(){
 
 This script will not format your scripts, and imports will not always be correct.
 
-It is highly recommended to go through the files that the script cerates to fix imports and such.
+It is highly recommended to go through the files that the script creates to fix imports and such.
 
 ## Uninstallation
 
