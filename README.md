@@ -7,7 +7,7 @@ This script will split up a cpp file to adhere to this format.
 
 ## Installation
 
-You must have deno installed on your system (or subsystem for wsl users).
+You must have [Deno](https://deno.com/) installed on your system (or linux subsystem for wsl users).
 
 Then run:
 
