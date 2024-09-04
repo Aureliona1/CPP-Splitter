@@ -34,22 +34,20 @@ Your CPP script must be formatted as such.
 ```cpp
 // ClassName.h
 class ClassName {
-	public:
-	int someMethod(int);
+ public:
+  int someMethod(int);
 };
 // end
 // ClassName.cpp
 
-int ClassName::someMethod(int a) {
-	return a * 2;
-}
+int ClassName::someMethod(int a) { return a * 2; }
 
 // end
 // main.cpp
 
-int main(){
-	ClassName a;
-	return 0;
+int main() {
+  ClassName a;
+  return 0;
 }
 
 // end
