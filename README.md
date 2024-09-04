@@ -60,7 +60,7 @@ This script will not format your scripts, and imports will not always be correct
 It is highly recommended that you go through the files that the script creates to fix imports and such.
 
 Additionally, files will be split most effectively when formatted to the Google cpp standard. This can be set in your VSCode settings.
-[!image](Images/google_setting.png "Setting formatting style for c/c++ extension")
+[image](Images/google_setting.png "Setting formatting style for c/c++ extension")
 
 ## Uninstallation
 
