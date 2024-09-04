@@ -27,7 +27,7 @@ This will split `"yourCPPscript.cpp"` into separate files in the `"dirName"` dir
 
 **Important:** `dirName` is optional, exclude this argument to create files in the open dir.
 
-## Formatting your CPP file
+### Formatting your CPP file
 
 Your CPP script must be formatted as such.
 
@@ -57,7 +57,9 @@ int main(){
 
 This script will not format your scripts, and imports will not always be correct.
 
-It is highly recommended to go through the files that the script creates to fix imports and such.
+It is highly recommended that you go through the files that the script creates to fix imports and such.
+
+Additionally, files will be split most effectively when formatted to the Google cpp standard. This can be set in your VSCode settings.
 
 ## Uninstallation
 
