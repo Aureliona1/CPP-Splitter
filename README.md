@@ -1,30 +1,9 @@
 # CPP-Splitter
 
-My uni uses a stupid structure for cpp where classes have to be defined in individual files and declared in another set of files.
-
+My uni uses a specific structure for cpp where classes have to be defined in individual files and declared in another set of files.
 But I want to do it all in one file to keep track of everything.
 
-This function should split it up into separate files.
-
-cpp files must be formatted as
-
-```cpp
-
-// filename.extension
-content;
-// end
-// filename.extension
-content;
-// end
-
-```
-
-etc...
-
-It doesn't account for includes or imports unless you put them in one of the sections.
-Also, if a header file requires another header file, the import will not be added.
-
-It is recommmended to go thorugh all your generated files and fix them after running.
+This script will split up a cpp file to adhere to this format.
 
 ## Installation
 
@@ -47,6 +26,38 @@ split_cpp "yourCPPscript.cpp" "dirName"
 This will split `"yourCPPscript.cpp"` into separate files in the `"dirName"` directory.
 
 **Important:** `dirName` is optional, exclude this argument to create files in the open dir.
+
+## Formatting your CPP file
+
+Your CPP script must be formatted as such.
+
+```cpp
+// ClassName.h
+class ClassName {
+	public:
+	int someMethod(int);
+};
+// end
+// ClassName.cpp
+
+int ClassName::someMethod(int a) {
+	return a * 2;
+}
+
+// end
+// main.cpp
+
+int main(){
+	ClassName a;
+	return 0;
+}
+
+// end
+```
+
+This script will not format your scripts, and imports will not always be correct.
+
+It is highly recommended to go through the files that the script cerates to fix imports and such.
 
 ## Uninstallation
 
