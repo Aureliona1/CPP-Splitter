@@ -25,3 +25,13 @@ It doesn't account for includes or imports unless you put them in one of the sec
 Also, if a header file requires another header file, the import will not be added.
 
 It is recommmended to go thorugh all your generated files and fix them after running.
+
+## Installation
+
+You must have deno installed on your system (or subsystem for wsl users).
+
+Then run:
+
+```bash
+deno install -r --allow-all -g -n split_cpp "https://raw.githubusercontent.com/Aureliona1/CPP-Splitter/main/split_cpp.ts"
+```
