@@ -19,14 +19,14 @@ export function splitCPP(file: string, outputFolder?: string) {
 		} else {
 			// In the case that we have a valid start and end
 			const content = src
-				.slice(start?.index ?? 0, end?.index ? end.index + 6 : 1)
-				.replaceAll(new RegExp(/\/\/ \w*\.(?:cpp|h)\s*/, "g"), "")
-				.replaceAll(new RegExp(/\s*\/\/ end/, "g"), "");
+				.slice(start?.index ?? 0, end?.index ? end.index + 6 : 1) // Get src section
+				.replaceAll(new RegExp(/\/\/ \w*\.(?:cpp|h)\s*/, "g"), "") // Remove start comment
+				.replaceAll(new RegExp(/\s*\/\/ end/, "g"), ""); // Remove end comment
 			if (content.length > 1) {
 				sections.push([(start?.[0] ?? "").replace("// ", "").trim(), content]); // For a while there wasn't a .trim() here which kept making files with a space at the end of the name :(
 			}
 			const arr = Array.from(src);
-			arr.splice(start?.index ?? 0, end?.index ? end.index + 6 - (start?.index ?? 0) : 1);
+			arr.splice(start?.index ?? 0, end?.index ? end.index + 6 - (start?.index ?? 0) : 1); // Remove the content from src
 			src = arr.join("");
 		}
 	}
