@@ -67,6 +67,7 @@ export function splitCPP(file: string, outputFolder?: string) {
 			}
 		}
 		Deno.writeTextFileSync(outputFolder ? outputFolder + "/" + sections[i][0] : sections[i][0], sections[i][1]);
+		console.log("Wrote file: " + sections[i][0] + "...");
 	}
 }
 
