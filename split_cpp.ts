@@ -69,6 +69,15 @@ export function splitCPP(file: string, outputFolder?: string) {
 		Deno.writeTextFileSync(outputFolder ? outputFolder + "/" + sections[i][0] : sections[i][0], sections[i][1]);
 		console.log("Wrote file: " + sections[i][0] + "...");
 	}
+	console.log(
+		"Compile this with: g++ -o " +
+			file.replaceAll(".cpp", "") +
+			" -Wall " +
+			sections
+				.map(x => x[0])
+				.filter(x => /.cpp/.test(x))
+				.join(" ")
+	);
 }
 
 splitCPP(Deno.args[0], Deno.args[1]);
