@@ -32,6 +32,13 @@ This will split `"yourCPPscript.cpp"` into separate files in the `"dirName"` dir
 Your CPP script must be formatted as such.
 
 ```cpp
+// Headers
+
+#include <iostream>
+#include <string>
+// The headers section is optional, but must go at the top of your script. It will add all content from this section to your header files.
+
+// end
 // ClassName.h
 class ClassName {
  public:
